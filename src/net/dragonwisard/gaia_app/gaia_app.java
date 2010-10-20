@@ -1,6 +1,8 @@
 package net.dragonwisard.gaia_app;
 
 import android.app.Activity;
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 
 public class gaia_app extends Activity
@@ -10,6 +12,9 @@ public class gaia_app extends Activity
     public void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.main);
+        Uri uri = Uri.parse(R.string.uri);
+        Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+        startActivity(intent);
+        this.finish();
     }
 }
