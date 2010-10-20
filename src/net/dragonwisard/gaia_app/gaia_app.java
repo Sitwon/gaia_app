@@ -12,7 +12,7 @@ public class gaia_app extends Activity
     public void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
-        Uri uri = Uri.parse(R.string.uri);
+        Uri uri = Uri.parse(getResources().getString(R.string.uri));
         Intent intent = new Intent(Intent.ACTION_VIEW, uri);
         startActivity(intent);
         this.finish();
